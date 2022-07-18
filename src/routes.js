@@ -15,14 +15,17 @@ import {
 } from '@react-navigation/stack';
 
 import LoginScreen from './screens/Login';
+import HomeScreen from './screens/Home';
 
 const Stack = createStackNavigator();
 
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
