@@ -23,7 +23,10 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} options={{
+          headerShown: null
+        }} />
+
         <Stack.Screen name="Home" component={HomeScreen} 
           options={{
             headerShown:null            
