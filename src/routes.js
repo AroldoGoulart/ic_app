@@ -16,13 +16,13 @@ import {
 
 import LoginScreen from './screens/Login';
 import HomeScreen from './screens/Home';
-
+import ReservaScreen from './screens/Reserva';
 const Stack = createStackNavigator();
 
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+    <Stack.Navigator initialRouteName='Reserva'>
       <Stack.Screen name="Login" component={LoginScreen} options={{
           headerShown: null
         }} />
@@ -32,6 +32,16 @@ function Routes() {
             headerShown:null            
           }}
           />
+
+        <Stack.Screen 
+        name="Reserva" 
+        component={ReservaScreen} 
+          options={{
+            title: 'Reservar salas'
+          }}
+       
+          />
+
 
       </Stack.Navigator>
     </NavigationContainer>

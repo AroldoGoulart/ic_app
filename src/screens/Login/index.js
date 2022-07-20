@@ -1,11 +1,26 @@
 import {View, Text, TextInput, Image, Dimensions} from 'react-native';
 import React, { useState } from 'react';
 import Logo from '../../images/logo.jpg'
+
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation, CommonActions } from '@react-navigation/core';
 function LoginScreen() {
   const { width } = Dimensions.get('screen')
   const [cpf, setCpf] = useState()
   const [password, setPassword] = useState()
+  const navigation  = useNavigation()
+  
+  const handlerLogin = () => {
+    const reset = CommonActions.reset({
+      routes: [
+        {
+          name: 'Home'
+        }
+      ],
+      index: 0
+    })
+    navigation.dispatch(reset)
+  }
 
   return (
     <View
@@ -52,6 +67,7 @@ function LoginScreen() {
               setCpf(Number.parseInt(text))
           }}
           value={cpf}
+          placeholder="Digite seu CPF"
         />
       </View>
 
@@ -76,6 +92,7 @@ function LoginScreen() {
           secureTextEntry
             onChangeText={(text) => setPassword(text)}
             value={password}
+            placeholder="Digite sua senha"
           />
       </View>
         
@@ -89,9 +106,7 @@ function LoginScreen() {
         justifyContent: 'center',
         alignItems:'center'
       }}  
-      onPress={() => {
-        // Todo conectar api de login
-      }}
+      onPress={handlerLogin}
       >
             <Text style={{
               color: 'white',
