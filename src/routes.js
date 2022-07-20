@@ -24,7 +24,11 @@ function Routes() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} 
+          options={{
+            headerShown:null            
+          }}
+          />
 
       </Stack.Navigator>
     </NavigationContainer>

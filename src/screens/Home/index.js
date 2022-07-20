@@ -1,5 +1,6 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, TouchableOpacity } from 'react-native';
+import { useAuth } from '../../contexts/auth';
 
 const AcessoRapido = [
   {
@@ -38,7 +39,10 @@ const Salas = [
 ];
 
 function HomeScreen() {
-
+  const {
+    user,
+    signIn
+  } = useAuth()
   const Auxiliar = ({ title }) => (
     <TouchableOpacity 
       style={{
@@ -72,6 +76,11 @@ function HomeScreen() {
         paddingHorizontal: 10
       }}
     >
+      <Text>
+        {
+          user.name
+        }
+      </Text>
       <Text 
         style={{ 
           color: 'black',
