@@ -16,14 +16,18 @@ import {
 
 import LoginScreen from './screens/Login';
 import HomeScreen from './screens/Home';
+import ReservationScreen from './screens/Reservation';
 
 const Stack = createStackNavigator();
 
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator initialRouteName='Reservar'>
       <Stack.Screen name="Login" component={LoginScreen} options={{
+          headerShown: null
+        }} />
+        <Stack.Screen name="Reservar" component={ReservationScreen} options={{
           headerShown: null
         }} />
 

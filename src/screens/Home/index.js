@@ -1,7 +1,8 @@
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, FlatList, StyleSheet,Image, Text, StatusBar, TouchableOpacity } from 'react-native';
 import { useAuth } from '../../contexts/auth';
-
+import Logo from '../../images/calendario.jpg';
+import Bell from '../../images/notificationbell.jpg';
 const AcessoRapido = [
   {
 
@@ -56,6 +57,7 @@ function HomeScreen() {
         alignItems: 'center'
       }}
     >
+      
       <Text style = {{ 
         textAlign:'center',
         color: 'white',
@@ -73,14 +75,53 @@ function HomeScreen() {
   return (
     <SafeAreaView 
       style={{
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        flex: 1
+      }}
+    > 
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center'
       }}
     >
-      <Text>
-        {
-          user.name
-        }
-      </Text>
+      <Image
+        source={{
+          uri: user.photo
+        }}
+        style = {{
+            borderRadius: 500,
+            width: 65,
+            height: 65,
+            marginRight: 10
+        }}
+        />
+        <View>
+          <Text 
+          style={{
+            color: 'black',
+            fontSize: 22
+          }}>
+            {
+              user.name
+              
+            }
+            
+          </Text>
+          <Text style={{
+            color: 'black',
+            fontSize: 18
+          }}>
+            {
+              user.rga
+            }
+          </Text>
+        </View>
+     
+        
+    </View>
+     
+
       <Text 
         style={{ 
           color: 'black',
@@ -122,6 +163,55 @@ function HomeScreen() {
         horizontal
         renderItem={renderCoisas}
       />
+
+      <TouchableOpacity
+        style={{
+        width: 80,
+        height: 80,
+        backgroundColor: '#000080',
+        right:10,
+        bottom: 20,
+        position:'absolute',
+        borderRadius: 500,
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+      >
+        <Image
+        source={Logo}
+        style = {{
+            backgroundColor: '#000080',
+            borderRadius: 500,
+            width: 65,
+            height: 65,
+            
+        }}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{
+        width: 50,
+        height: 50,
+        backgroundColor: 'white',
+        right:10,
+        top: 20,
+        position:'absolute',
+        borderRadius: 500,
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+      >
+        <Image
+        source={Bell}
+        style = {{
+            
+            borderRadius: 500,
+            width: 35,
+            height: 35,
+            
+        }}
+        />
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
