@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet,Image, Text, StatusBar, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, View, FlatList, StyleSheet, Text, StatusBar, TouchableOpacity } from 'react-native';
 import { useAuth } from '../../contexts/auth';
 import Logo from '../../images/calendario.jpg';
 import Bell from '../../images/notificationbell.jpg';
