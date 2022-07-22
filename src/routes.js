@@ -17,8 +17,9 @@ import {
 import LoginScreen from './screens/Login';
 import HomeScreen from './screens/Home';
 import ReservationScreen from './screens/Reservation';
-
+//import ReservationCancelScreen from './screens/Reservasview';
 import ReservaScreen from './screens/Reserva';
+
 const Stack = createStackNavigator();
 
 function Routes() {
@@ -37,6 +38,11 @@ function Routes() {
             headerShown:null            
           }}
           />
+        {/*<Stack.Screen name="Cancelreserva" component={ReservationCancelScreen} 
+          options={{
+            headerShown:null            
+          }}
+          />*/}
 
         <Stack.Screen 
         name="Reserva" 

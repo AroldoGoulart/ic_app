@@ -6,6 +6,7 @@ export const AuthProvider = ({ children }) => {
     const  [user, setUser] = useState({
         name: 'Esquilo',
         rga: '1231244320',
+        email:'mmmmm@gmail.com',
         photo:  'https://www.infoescola.com/wp-content/uploads/2008/07/esquilo_128704667-1000x683.jpg'
     })
     const  [loading, setLoading] = useState(false)
@@ -17,6 +18,7 @@ export const AuthProvider = ({ children }) => {
 
         setUser({
             name: 'Esquilo 2',
+            email:'aaaaaa@gmail.com',
             photo:  'https://www.infoescola.com/wp-content/uploads/2008/07/esquilo_128704667-1000x683.jpg',
             rga: '23143534554'
         })

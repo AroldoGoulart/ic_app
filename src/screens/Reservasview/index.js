@@ -5,8 +5,8 @@ import Voltar from '../../images/voltar.jpg';
 
 import RNPickerSelect from 'react-native-picker-select';
 
-function ReservationScreen(){
-    const [selected, setSeleted] = useState()
+function ReservationCancelScreen(){
+    
     const [data, setData] = useState()
     const [horaInicio, setHoraInicio] = useState()
     const [horaFim, setHoraFim] = useState()
@@ -289,7 +289,7 @@ function ReservationScreen(){
                         fontWeight: '700',
                         fontSize: 25
                     }}>
-                        Reservar
+                        Cancelar Reservar
                     </Text>
                 </TouchableOpacity>  
             </View>     
@@ -298,5 +298,6 @@ function ReservationScreen(){
         )
 
 }
-export default ReservationScreen;
+
+export default ReservationCancelScreen;
 
