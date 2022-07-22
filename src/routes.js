@@ -25,7 +25,7 @@ const Stack = createStackNavigator();
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Contatos'>
+      <Stack.Navigator initialRouteName='Home'>
       <Stack.Screen name="Login" component={LoginScreen} options={{
           headerShown: null
         }} />
