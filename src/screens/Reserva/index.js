@@ -90,7 +90,8 @@ function ReservaScreen(){
                             style={{
                                 color: "white",
                                 fontSize: 25,
-                                paddingHorizontal: 15
+                                paddingHorizontal: 15,
+                                fontWeight: 'bold'
                             }}
                             >
                                 {
@@ -103,7 +104,8 @@ function ReservaScreen(){
                             style={{
                                 color: "white",
                                 fontSize: 15,
-                                paddingHorizontal: 15
+                                paddingHorizontal: 15,
+                                fontWeight: 'bold'
                             }}
                             >
                                 {
@@ -117,12 +119,32 @@ function ReservaScreen(){
                                 color: "white",
                                 fontSize: 15,
                                 paddingHorizontal: 15,
-                                top: 15
+                                top: 12,
+                                fontWeight: 'bold'
                             }}
                             >
                                 {
                                     item.nome_aluno
                                 }  
+                            </Text>
+
+                            
+                            <Text
+                            
+                            style={{
+                                color: "white",
+                                fontSize: 17,
+                                paddingHorizontal: 15,
+                                left: 260,
+                                bottom: 10 
+                            }}
+                            >
+                                {
+                                    item.horario_inicio
+                                }~ 
+                                {
+                                    item.horario_fim
+                                } 
                             </Text>
                         </TouchableOpacity>
                      
@@ -154,7 +176,7 @@ function ReservaScreen(){
                                 backgroundColor: '#00008B',
                                 borderRadius: 5,
                                 marginBottom: 20,
-                                height: 80
+                                height: 95
                             }}
                         >
                             <Text
@@ -162,12 +184,61 @@ function ReservaScreen(){
                             style={{
                                 color: "white",
                                 fontSize: 25,
-                                paddingHorizontal: 15
+                                paddingHorizontal: 15,
+                                fontWeight: 'bold'
                             }}
                             >
                                 {
                                     item.sala
-                                }
+                                }  
+                            </Text>
+
+                            <Text
+                            
+                            style={{
+                                color: "white",
+                                fontSize: 15,
+                                paddingHorizontal: 15,
+                                fontWeight: 'bold'
+                            }}
+                            >
+                                {
+                                    item.subnome
+                                }  
+                            </Text>
+
+                            <Text
+                            
+                            style={{
+                                color: "white",
+                                fontSize: 15,
+                                paddingHorizontal: 15,
+                                top: 12,
+                                fontWeight: 'bold'
+                            }}
+                            >
+                                {
+                                    item.nome_aluno
+                                }  
+                            </Text>
+
+                            
+                            <Text
+                            
+                            style={{
+                                color: "white",
+                                fontSize: 17,
+                                paddingHorizontal: 15,
+                                left: 260,
+                                bottom: 10 
+                            }}
+                            >
+                                {
+                                    item.horario_inicio
+                                }~ 
+                                {
+                                    item.horario_fim
+                                } 
                             </Text>
                         </TouchableOpacity>
                      
