@@ -19,13 +19,12 @@ import HomeScreen from './screens/Home';
 import ReservationScreen from './screens/Reservation';
 //import ReservationCancelScreen from './screens/Reservasview';
 import ReservaScreen from './screens/Reserva';
-
 const Stack = createStackNavigator();
 
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Login'>
+      <Stack.Navigator initialRouteName='Home'>
       <Stack.Screen name="Login" component={LoginScreen} options={{
           headerShown: null
         }} />
@@ -52,6 +51,10 @@ function Routes() {
           }}
        
           />
+
+        <Stack.Screen name="Contatos" component={ContatosScreen} options={{
+          
+        }} />
 
 
       </Stack.Navigator>
